@@ -11,22 +11,22 @@ class Engine {
     callFor(n) {
         this.forLoop = new this.forConstructor(n);
         let next_value = this.forLoop.looping()
-        this.forData.push({input:this.forLoop.n_times, duration:this.forLoop.getTime()});
+        this.forData.push({input:this.forLoop.n_times, duration:this.forLoop.getTime(), sum:this.forLoop.sum_value});
         while (next_value > 0) {
             let newLoop = new this.forConstructor(next_value);
             next_value = newLoop.looping();
-            this.forData.push({input:newLoop.n_times, duration:newLoop.getTime()});
+            this.forData.push({input:newLoop.n_times, duration:newLoop.getTime(), sum:newLoop.sum_value});
         }
 
     }
     callRec(n) {
         this.recCall = new this.recConstructor(n);
         let next_value = this.recCall.looping();
-        this.recData.push({input:this.recCall.n_times, duration:this.recCall.getTime()});
+        this.recData.push({input:this.recCall.n_times, duration:this.recCall.getTime(), sum:this.recCall.sum_value});
         while (next_value > 0) {
             let newLoop = new this.recConstructor(next_value);
             next_value = newLoop.looping();
-            this.recData.push({input:newLoop.n_times, duration:newLoop.getTime()});
+            this.recData.push({input:newLoop.n_times, duration:newLoop.getTime(), sum:newLoop.sum_value});
         }
     };
     checkData() {

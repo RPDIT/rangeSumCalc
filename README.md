@@ -4,7 +4,7 @@ When given a number, the calculator will find the sum of all positive integers b
 
 This process is solved using two different methods: the first method is a for loop that adds each value within the range; the second method utilizes a function that calls itself recursively to calculate the sum. 
 
-## Anallyzing the differences
+## Analyzing the differences
 
 After an initial proof of concept, I wanted to find the differences in performance between the two methods by timing the duration of each loop. 
 

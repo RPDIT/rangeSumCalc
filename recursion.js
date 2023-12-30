@@ -49,7 +49,7 @@ function main(x, y) {
     console.log(engine.analysis);
 };
 
-main(9999,999);
+main(9999,9999);
 
 export default Engine;
 

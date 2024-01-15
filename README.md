@@ -20,11 +20,31 @@ After completing the development of the calculator, I decided to expand this too
 
 ## Usage
 
-Add the max number you want to use as an input into the next portion of your URL, as shown below:
+Add the max number you want to use as an input into the url, as shown below:
 
-`http://localhost:9000/35`
+`http://localhost:9000/calc/35`
 
 This will provide an output showing the values calculated and the time taken for each loop method. It will also provide the analsys of which method was faster on each input that was shared between the two.
+
+`http://localhost:9000/calc/5/results`
+
+This will respond with an array of results object, each object is structured with the input, sum, for loop duration, and recursion duration.
+
+```
+[{
+"input": 5,
+"sum": 15,
+"forDur": 44,
+"recDur": 38
+}]
+```
+
+The conclusions route will return a conclusion on which method, on average, completed each sum the fastest.
+
+`http://localhost:9000/calc/35/conclusions`
+
+It will respond with a string
+`The Recursive method was 4ms faster on average.`
 
 ## Markdown Rendering
 

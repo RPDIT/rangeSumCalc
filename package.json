@@ -5,7 +5,7 @@
   "description": "",
   "main": "recursion.js",
   "scripts": {
-    "start": "nodemon recursion.js",
+    "start": "nodemon index.js",
     "test": "mocha -w -parallel ./*.test.js"
   },
   "author": "",
@@ -14,5 +14,9 @@
     "chai": "^5.0.0",
     "mocha": "^10.2.0",
     "nodemon": "^3.0.2"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "markdown-it": "^14.0.0"
   }
 }

@@ -19,7 +19,7 @@ class LoopMethod {
         return `The system received the input ${this.n_times} and took ${this.getTime()}s to find the sum ${this.sum_value} using ${this.r} ${this.count} times.`;
     };
     nextRandomNumber() {        
-        return Math.floor(Math.random() * this.n_times);        
+        return Math.floor(this.n_times-Math.random(0, this.n_times));       
     };
     callCount() {
         this.count += 1;

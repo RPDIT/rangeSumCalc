@@ -40,16 +40,5 @@ class Engine {
     };
 };
 
-function main(x, y) {
-    let engine = new Engine()
-    let value1 = engine.callFor(x);
-    let value2 = engine.callRec(y);
-    engine.checkData()
-    console.log(engine.forData, engine.recData);
-    console.log(engine.analysis);
-};
-
-main(9999,9999);
-
 export default Engine;
 

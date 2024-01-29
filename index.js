@@ -1,9 +1,12 @@
 import express from "express";
 import controller from "./controller.js";
+import helmet from "helmet";
+import morgan from "morgan";
 
 const app = express();
 app.use(express.json());
-
+app.use(morgan("combined"));
+app.use(helmet());
 
 app.get("/", controller.readMe)
 app.get("/calc/:id", controller.getSums)

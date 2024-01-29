@@ -22,17 +22,16 @@ class Engine {
     };
     checkData() {
         this.recData.forEach((element, index, inputArray) => {
-            this.forData.forEach((forElement, forIndex) => {
-                if (element.input == forElement.input) {
-                    let difference = Math.floor((forElement.duration - element.duration)*1000);
-                    if (difference > 0){
-                        this.analysis.push(`The recursive method was ${difference}ms faster at handling the input ${element.input}`);
-                    } else {
-                        this.analysis.push(`The For Loop method was ${Math.abs(difference)}ms faster at handling the input ${element.input}`);     
-                    };
-                    this.results.push(new Result(element.input, element.sum, forElement.duration, element.duration));
+            let forElement = this.forData[index];
+            if (element.input == forElement.input) {
+                let difference = Math.floor((forElement.duration - element.duration));
+                if (difference > 0){
+                    this.analysis.push(`The recursive method was ${difference}ms faster at handling the input ${element.input}`);
+                } else {
+                    this.analysis.push(`The For Loop method was ${Math.abs(difference)}ms faster at handling the input ${element.input}`);     
                 };
-            });
+                this.results.push(new Result(element.input, element.sum, forElement.duration, element.duration));
+            };
         });
     };
     conclusions() {

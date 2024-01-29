@@ -9,7 +9,6 @@ class LoopMethod {
         this.start_time = performance.now();
         this.sum_value = this.transform(this.n_times);
         this.end = performance.now();
-        console.log(this.the_output());
         return this.nextRandomNumber();
     };
     getTime() { 
